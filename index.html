@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Responsive Web Design</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
@@ -12,29 +12,70 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Our Services</h2>
-      <p>We offer web design and development services to create responsive and user-friendly websites.</p>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We are a creative team passionate about building modern, responsive, and engaging websites for businesses of all sizes. Our mission is to make your online presence unforgettable.</p>
     </section>
-    <section class="grid-container">
-      <div class="grid-item">Service 1</div>
-      <div class="grid-item">Service 2</div>
-      <div class="grid-item">Service 3</div>
-      <div class="grid-item">Service 4</div>
-      <div class="grid-item">Service 5</div>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <p>We specialize in web design, development, and responsive solutions tailored to your needs.</p>
+      <div class="grid-container">
+        <div class="grid-item">
+          <h3>Web Design</h3>
+          <p>Beautiful and intuitive designs that reflect your brand identity.</p>
+        </div>
+        <div class="grid-item">
+          <h3>Web Development</h3>
+          <p>Clean, efficient code for fast, scalable websites.</p>
+        </div>
+        <div class="grid-item">
+          <h3>SEO Optimization</h3>
+          <p>Boost your visibility on search engines and attract more visitors.</p>
+        </div>
+        <div class="grid-item">
+          <h3>E-commerce Solutions</h3>
+          <p>Online stores that convert visitors into loyal customers.</p>
+        </div>
+        <div class="grid-item">
+          <h3>Maintenance</h3>
+          <p>We keep your site running smoothly with ongoing support.</p>
+        </div>
+        <div class="grid-item">
+          <h3>Consulting</h3>
+          <p>Get expert advice on your next digital project.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Have a project in mind? Let’s talk!</p>
+      <form>
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="4" required></textarea><br />
+
+        <button type="submit">Send</button>
+      </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; Samuel responsive Web Design</p>
+    <p>&copy; 2025 Samuel Responsive Web Design. All rights reserved.</p>
   </footer>
 </body>
 </html>
