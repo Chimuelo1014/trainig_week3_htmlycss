@@ -1,122 +1,125 @@
-body{
+/* Fuente por defecto y ajustes generales para todo el documento */
+body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
+  margin: 0;              /* Elimina el margen externo del body */
+  padding: 0;             /* Elimina el relleno interno del body */
+  box-sizing: border-box; /* Hace que el padding y border no afecten el ancho total del elemento */
 }
 
-header{
-  background-color: #f89090;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Estilo del encabezado principal */
+header {
+  background-color: #f89090;   /* Color de fondo rosado */
+  color: white;                /* Texto blanco */
+  display: flex;               /* Flexbox para alinear elementos */
+  justify-content: space-between; /* Espacio entre título y menú */
+  align-items: center;         /* Centra verticalmente */
   padding: 20px;
   text-align: center;
-
 }
 
-nav ul{
-  display: flex;
-  list-style: none;
-
-
+/* Contenedor de navegación (lista horizontal) */
+nav ul {
+  display: flex;       /* Elementos en línea */
+  list-style: none;    /* Elimina los puntos de la lista */
 }
 
-nav ul li{
-  margin: 0 15px;
-  
+/* Cada ítem del menú */
+nav ul li {
+  margin: 0 15px;      /* Espacio horizontal entre elementos */
 }
 
-nav ul li a{
-  color: white;
-  text-decoration: none;
-
-}
-a:hover{
-  text-decoration:underline rgb(255, 255, 255);
+/* Estilo de los enlaces del menú */
+nav ul li a {
+  color: white;        /* Texto blanco */
+  text-decoration: none; /* Sin subrayado */
 }
 
-main{
-  padding: 20px;
+/* Efecto al pasar el mouse por los enlaces */
+a:hover {
+  text-decoration: underline white; /* Subrayado blanco al hacer hover */
 }
 
-.grid-container{
-  display: flex;
+/* Contenido principal */
+main {
+  padding: 20px; /* Espacio interno alrededor del contenido */
+}
+
+/* Contenedor para los servicios (versión en flex, pero es reemplazada luego) */
+.grid-container {
+  display: flex;             /* Esto queda sobrescrito por el grid de abajo */
   justify-content: space-between;
   gap: 20px;
 }
 
-.grid-item{
-  background-color: #f4f4f4;
-  padding: 20px;
-  border: 1px solid #ccc;
-  text-align: center;
-  flex: 1;
+/* Estilo para cada tarjeta de servicio */
+.grid-item {
+  background-color: #f4f4f4; /* Fondo gris claro */
+  padding: 20px;             /* Espacio interno */
+  border: 1px solid #ccc;    /* Borde gris claro */
+  text-align: center;        /* Centra el texto */
+  flex: 1;                   /* Ocupa el mismo espacio dentro del contenedor */
 }
 
-.grid-container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+/* Reemplaza el display anterior por grid (más moderno y adaptable) */
+.grid-container {
+  display: grid;                      /* Usa grid en vez de flex */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 20px;                          /* Espacio entre tarjetas */
 }
 
+/* Adaptación para pantallas medianas (como tablets) */
 @media (max-width: 768px) {
-  .grid-container{
-    grid-template-columns: repeat(2, 1fr);
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas más pequeñas */
   }
-  nav ul{
-    flex-direction: column;
+
+  nav ul {
+    flex-direction: column; /* Menú vertical */
   }
 }
 
-
+/* Adaptación para pantallas pequeñas (como móviles) */
 @media (max-width: 480px) {
-  .grid-container{
-    grid-template-columns: 1fr;
+  .grid-container {
+    grid-template-columns: 1fr; /* Solo una columna */
+  }
 
+  header {
+    flex-direction: column;       /* Elementos del header en vertical */
+    align-items: flex-start;      /* Alineados a la izquierda */
   }
-  header{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav ul{
+
+  nav ul {
     flex-direction: column;
     align-items: flex-start;
   }
 }
 
-
+/* Estilos adicionales para formularios y botones */
 section {
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* Separación entre secciones */
 }
 
 form {
-  max-width: 400px;
+  max-width: 400px;    /* Ancho máximo del formulario */
   margin-top: 20px;
 }
 
 input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  width: 100%;         /* Que ocupen todo el ancho disponible */
+  padding: 10px;       /* Espacio interno */
+  margin: 10px 0;      /* Espacio entre campos */
   box-sizing: border-box;
 }
 
 button {
   padding: 10px 20px;
-  background-color: #f89090;
+  background-color: #f89090; /* Mismo color del header */
   color: white;
   border: none;
-  cursor: pointer;
+  cursor: pointer;     /* Cursor tipo mano */
 }
 
 button:hover {
-  background-color: #e16c6c;
-}
-
-footer{
-  border-top: 2px solid;
-  background-color: rgb(241,241,241);
+  background-color: #e16c6c; /* Color más oscuro al pasar el mouse */
 }
