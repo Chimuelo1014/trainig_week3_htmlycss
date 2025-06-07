@@ -4,13 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Responsive Web Design</title>
+  <!-- Enlace al archivo CSS externo -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- Encabezado principal con navegación -->
   <header>
     <h1>Welcome to Responsive Design</h1>
     <nav>
       <ul>
+        <!-- Enlaces de navegación -->
         <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
@@ -19,16 +23,23 @@
     </nav>
   </header>
 
+  <!-- Contenido principal del sitio -->
   <main>
+
+    <!-- Sección "Sobre nosotros" -->
     <section id="about">
       <h2>About Us</h2>
       <p>We are a creative team passionate about building modern, responsive, and engaging websites for businesses of all sizes. Our mission is to make your online presence unforgettable.</p>
     </section>
 
+    <!-- Sección de servicios ofrecidos -->
     <section id="services">
       <h2>Our Services</h2>
       <p>We specialize in web design, development, and responsive solutions tailored to your needs.</p>
+
+      <!-- Contenedor de servicios con diseño en cuadrícula -->
       <div class="grid-container">
+        <!-- Cada "grid-item" representa un servicio -->
         <div class="grid-item">
           <h3>Web Design</h3>
           <p>Beautiful and intuitive designs that reflect your brand identity.</p>
@@ -56,9 +67,12 @@
       </div>
     </section>
 
+    <!-- Sección de contacto con formulario -->
     <section id="contact">
       <h2>Contact Us</h2>
       <p>Have a project in mind? Let’s talk!</p>
+
+      <!-- Formulario de contacto -->
       <form>
         <label for="name">Name:</label><br />
         <input type="text" id="name" name="name" required /><br />
@@ -72,10 +86,13 @@
         <button type="submit">Send</button>
       </form>
     </section>
+
   </main>
 
+  <!-- Pie de página -->
   <footer>
     <p>&copy; 2025 Samuel Responsive Web Design. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
